@@ -1,0 +1,138 @@
+PHP no Prompt de comando:
+
+Para entrar no Terminal Interativo: php -a 
+
+Limpar terminal: cls 
+
+--------------------------------------------------------------------------------------------------------------------
+Códigos dentro do php:
+
+Exibir algo: comando: echo "alguma coisa";
+
+--------------------------------------------------------------------------------------------------------------------
+Execuuta código PHP após o comando: <?php
+
+--------------------------------------------------------------------------------------------------------------------
+Declarar variaveis: $nomeDaVariavel;
+
+--------------------------------------------------------------------------------------------------------------------
+Operação exponencial = variavel ** (número que será o expoente);
+
+--------------------------------------------------------------------------------------------------------------------
+Concatenação (juntar string com número): echo "olá mundo" . $idade; -> Usa . para concatenar/
+SE USAR ASPAS DUPLAS "", dá para concatenar usando apenas o nome da variavel: "Minha idade é $idade";
+
+--------------------------------------------------------------------------------------------------------------------
+Quebra linha: "\n" -> sempre dentro das aspas duplas. Se for nas aspas simples, será transformado em String;.
+PHP_EOL -> funciona também como quebra de lihna = "Minha idade" . PHP_EOL; 
+Esta Constante leva em consideração os diferentes caracteres utilizados para quebrar linha em diferentes sistemas operacionais.
+
+--------------------------------------------------------------------------------------------------------------------
+Espaço do tab> "\t" -> espaçamento do tab.
+
+--------------------------------------------------------------------------------------------------------------------
+Vetores:
+$idadeList = array(21,23,24,25,267,892);
+Ou $idadeList = [21,23,24,25,267,892];
+$idadeList = [];
+
+------------------------------------------------------------------------------------------------------------------------]
+sizeof($variavelVetor); = para saber o tamanho de um vetor.
+
+------------------------------------------------------------------------------------------------------------------------]
+Arrays Associativos:
+
+$contas = ['titular' => "Vinicius", 'saldo' => 1000];
+
+podemos criar os indices do vetor, ou seja, para exibir vinicius podemos usar $contas[titular] para exibir.
+
+Se colocar dentro de outro vetor, vai funcionar como uma matriz, por exemplo: $contasCorrentes = [$conta1, $conta2, $conta3];
+echo $contasCorrentes[$i] ["titular"]; -> vai mostrar os titulares.
+
+------------------------------------------------------------------------------------------------------------------------]
+FOR EACH:
+
+foreach($contasCorrentes as $conta){
+    echo $conta["titular"] . PHP_EOL;
+}
+A variavel conta irá receber cada indice do array.
+
+
+foreach($contasCorrentes as $cpf => $conta){
+    echo $conta["titular"] . PHP_EOL;
+} 
+Para acessar cada indice dentro do indice.
+
+Para acessar um vetor dentro de outro: 
+
+foreach($contasCorrentes as $cpf => $conta){
+ echo $cpf . " " . $conta["exemplo"]. PHP_EOL;
+}
+------------------------------------------------------------------------------------------------------------------------]
+Sobre Array:
+
+Se não informar nenhum valor dentro do array, será inserido o valor no item seguinte ao ultimo valor:
+
+$idadeLista[] = 20; 
+Porém, será incrementado a posição do item.
+
+Imprimir arrays = print_r($Array);
+
+------------------------------------------------------------------------------------------------------------------------]
+
+Juntando arquivos:
+
+include NOme do arquivo.php; -> Faz com que os arquivos tenham uma conexão entre os códigos.
+ 
+Include -> arquivos que não são obrigatorios para o funcionamento do site. (executa mesmo não achando o arquivo).
+
+
+require -> mesma coisa que o Include, mas se não achar o outro arquivo, vai dar erro em vez de um warning;
+
+require_once -> verifica se o arquivo já foi incluido;
+------------------------------------------------------------------------------------------------------------------------]
+
+Transforma as letras em maiusculas:
+strtoupper();
+
+------------------------------------------------------------------------------------------------------------------------]
+
+Adicionando valores de um vetor em outro vetor:
+
+list($valor1,$valor2,$valor3) = $vetorQueRecebe;
+
+ou pode ser usado desta forma: 
+
+ ['indice1' => $indice1, 'indice2' => $indice2] = $vetor;
+------------------------------------------------------------------------------------------------------------------------]
+
+Remover uma variável da memória:
+
+unset($variavel);
+------------------------------------------------------------------------------------------------------------------------]
+servidor web:
+
+php -S localhost:8080 ->
+executar isso no cmd, localhost se refere a máquina utilizada. 8080 é a porta, pode ser qualquer porta livre.
+
+para acessar na web: localhost:8080, sempre irá ser procurado o arquivo index.html/php
+
+se quiser abrir outro arquivo: localhost:8080/nomearquivo.php
+
+para fechar o servidor: dar um Ctrl+C
+
+
+
+
+
+
+
+
+  
+ 
+
+
+
+
+
+
